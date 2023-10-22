@@ -1,0 +1,47 @@
+<ServerIP@Screen>:
+    name: "ip"
+    MDLabel:
+        font_style: "H2"
+        text: "Enter Server IP"
+        size_hint_y: None
+        height: self.texture_size[1]
+        halign: "center"
+        pos_hint:{"top": .9}
+
+    MDTextField:
+        id: field
+        mode: "fill"
+        size_hint_x: .9
+        hint_text: "Ip Address(192.168.1.100):"
+        pos_hint: {"center_y": .5, "center_x": .5}
+        on_text_validate:
+            app.thread_server_connection(self.text)
+
+    MDCard:
+        size_hint_y: None
+        height: dp(50)
+        md_bg_color: app.theme_cls.primary_color
+        size_hint_x: .5
+        pos_hint: {"center_x": .5, "center_y": .4}
+        ripple_behavior: True
+        radius: [dp(7), dp(20), dp(7), dp(20)]
+        on_release:
+            app.thread_server_connection(field.text)
+        MDLabel:
+            font_style: "Button"
+            bold: True
+            halign: "center"
+            text: "Connect"
+            theme_text_color: "Custom"
+            text_color: 1,1,1,1
+
+
+    MDLabel:
+        text_color: 1,0,0,1
+        theme_text_color: "Custom"
+        text: "do not modify 'serverip.kv' file"
+        height: self.texture_size[1]
+        halign: "center"
+        pos_hint:{"center_y": .1}
+        bold: True
+        italic: True
