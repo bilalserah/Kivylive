@@ -46,10 +46,10 @@ requirements = python3,kivy==2.0.0,pygments,watchdog,https://github.com/kivymd/K
 #garden_requirements =
 
 # (str) Presplash of the application
-presplash.filename = %(source.dir)s/assets/images/live.jpg
+presplash.filename = %(source.dir)s/live.jpg
 
 # (str) Icon of the application
-icon.filename = %(source.dir)s/assets/images/live.jpg
+icon.filename = %(source.dir)s/live.jpg
 
 # (str) Supported orientation (one of landscape, sensorLandscape, portrait or all)
 orientation = all
